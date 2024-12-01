@@ -31,7 +31,7 @@ class HNN:
         :return: 收敛后的模式
         """
         state = np.copy(input_pattern)
-        for _ in range(max_iterations):
+        for iter in range(max_iterations):
             prev_state = np.copy(state)
             # 异步更新：逐个神经元更新状态
             for i in range(self.n_neurons):
